@@ -1,0 +1,41 @@
+# Help can be found at http://dev.bukkit.org/server-mods/dragoneggs/
+# Messages can contain the basic Minecraft formatting codes.
+# The Messages MUST be within the '' quotation marks.
+Messages:
+  SummonSuccess: '&9You have released the wrath of the Ender Dragon!'
+  SummonFail: '&2You fail to summon the beast under your command.'
+  WrongWorld: '&4The beast refuses to inhabit such a world.'
+Dragon:
+  CreatePortal: false
+  DropEgg: true
+  Health: 200
+  Limit:
+  - world;10
+  - world_nether;0
+  - world_the_end;1
+ItemCost:
+  Enabled: true
+  Item: GOLDEN_CARROT
+  Amount: 32
+EconomyCost:
+  Enabled: false
+  Cost: 999.99
+DisableDragonSpawn:
+  NormalEnv: false
+  NetherEnv: false
+  TheEndEnv: false
+DisableDragonBlockDamage:
+  NormalEnv: false
+  NetherEnv: false
+  TheEndEnv: false
+DragonEggRecipe:
+  Enabled: true
+  TopLeft: DIAMOND
+  TopMiddle: OBSIDIAN
+  TopRight: DIAMOND
+  MiddleLeft: OBSIDIAN
+  MiddleMiddle: NETHER_STAR
+  MiddleRight: OBSIDIAN
+  BottomLeft: DIAMOND
+  BottomMiddle: OBSIDIAN
+  BottomRight: DIAMOND

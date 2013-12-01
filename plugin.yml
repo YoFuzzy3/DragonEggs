@@ -1,0 +1,18 @@
+name: DragonEggs
+version: 2.3
+description: Summon dragons and control many aspects of them!
+author: YoFuzzy3
+dev-url: http://dev.bukkit.org/server-mods/dragoneggs/
+main: com.fuzzoland.DragonEggs.Main
+
+commands:
+  DragonEggs:
+    description: Root command for DragonEggs.
+        
+permissions:
+  DragonEggs.Summon:
+    description: Allows summoning dragons from dragon eggs.
+    default: true
+  DragonEggs.Admin:
+    description: Allows using all /DragonEggs commands.
+    default: op
