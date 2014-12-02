@@ -110,22 +110,26 @@ public class EventListener implements Listener{
 	
 	@EventHandler
 	public void onEntityCreatePortal(EntityCreatePortalEvent event){
-		if(!plugin.getConfig().getBoolean("Dragon.CreatePortal")){
-			if(PortalType.ENDER != null){
-				event.setCancelled(true);
+		if(plugin.getConfig().getBoolean("Dragon.DeathHandling.EnableDeathHandling")){
+			if(!plugin.getConfig().getBoolean("Dragon.DeathHandling.EnableDeathHandling.CreatePortal")){
+				if(PortalType.ENDER != null){
+					event.setCancelled(true);
+				}
 			}
 		}
 	}
 	
 	@EventHandler
 	public void onEntityDeath(EntityDeathEvent event){
-		if(plugin.getConfig().getBoolean("Dragon.DropEgg")){
-			if(event.getEntity() instanceof EnderDragon){
-				EnderDragon dragon = (EnderDragon) event.getEntity();
-				Location loc = dragon.getLocation();
-				World world = dragon.getWorld();
-				ItemStack dragonEgg = new ItemStack(Material.DRAGON_EGG);
-				world.dropItemNaturally(loc, dragonEgg);
+		if(plugin.getConfig().getBoolean("Dragon.DeathHandling.EnableDeathHandling")){
+			if(plugin.getConfig().getBoolean("Dragon.DeathHandling.EnableDeathHandling.DropEgg")){
+				if(event.getEntity() instanceof EnderDragon){
+					EnderDragon dragon = (EnderDragon) event.getEntity();
+					Location loc = dragon.getLocation();
+					World world = dragon.getWorld();
+					ItemStack dragonEgg = new ItemStack(Material.DRAGON_EGG);
+					world.dropItemNaturally(loc, dragonEgg);
+				}
 			}
 		}
 	}
