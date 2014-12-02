@@ -6,13 +6,17 @@ Messages:
   SummonFail: '&2You fail to summon the beast under your command.'
   WrongWorld: '&4The beast refuses to inhabit such a world.'
 Dragon:
-  CreatePortal: false
-  DropEgg: true
+  #These Values only affect dragons spawned from this Plugin
   Health: 200
   Limit:
   - world;10
   - world_nether;0
   - world_the_end;1
+  #Handles dragon deaths globally(all worlds)
+  DeathHandling:
+    EnableDeathHandling: false
+    CreatePortal: false
+    DropEgg: true
 ItemCost:
   Enabled: true
   Item: GOLDEN_CARROT
